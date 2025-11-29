@@ -22,3 +22,21 @@ export interface MessageInfo {
   message: string;
 }
 
+export interface Customer {
+  id: number;
+  firstName: string;
+  lastNamePaternal: string;
+  lastNameMaternal: string | null;
+  birthDate: string | null;
+  email: string;
+  phoneNumber: string | null;
+  ci: string;
+  addressLine: string | null;
+  city: string | null;
+  state: string | null;
+  postalCode: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+
