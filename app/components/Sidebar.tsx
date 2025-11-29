@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleIcon from "@mui/icons-material/People";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -20,6 +21,7 @@ const menuItems = [
   { name: "Dashboard", path: "/", icon: <DashboardIcon /> },
   { name: "Clientes", path: "/customers", icon: <PeopleIcon /> },
   { name: "Empleados", path: "/employees", icon: <PeopleIcon /> },
+  { name: "Productos", path: "/products", icon: <ShoppingCartIcon /> },
 ];
 
 export default function Sidebar() {

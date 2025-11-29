@@ -39,4 +39,23 @@ export interface Customer {
   updatedAt: string;
 }
 
+export interface MeasurementUnit {
+  id: number;
+  code: string;
+  name: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+}
 
+export interface Product {
+  id: number;
+  name: string;
+  sku: string;
+  description: string;
+  price: number;
+  stock: number;
+  measurementUnit: MeasurementUnit;
+  createdAt: string;
+  updatedAt: string;
+}
