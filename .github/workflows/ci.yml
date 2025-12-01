@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_API_URL: https://api.miapp.com
+      NEXT_PUBLIC_API_URL: https://mdeis-customer-backend-production.up.railway.app
 
     strategy:
       matrix:
@@ -52,7 +52,7 @@ jobs:
           context: .
           push: true
           build-args: |
-            NEXT_PUBLIC_API_URL=https://api.miapp.com
+            NEXT_PUBLIC_API_URL=https://mdeis-customer-backend-production.up.railway.app
           tags: |
             aicallec/proyect_ci:latest
             aicallec/proyect_ci:${{ github.sha }}
