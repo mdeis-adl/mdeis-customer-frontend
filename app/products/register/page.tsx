@@ -125,6 +125,7 @@ export default function ProductRegister() {
         mt={2}
         container
         spacing={2}
+        role="form"
       >
         <Grid size={{ xs: 6, md: 4 }}>
           <TextField
@@ -175,10 +176,16 @@ export default function ProductRegister() {
         </Grid>
         <Grid size={{ xs: 6, md: 4 }}>
           <FormControl fullWidth>
-            <InputLabel variant="standard" htmlFor="uncontrolled-native">
+            <InputLabel
+              id="measurement-unit-label"
+              variant="standard"
+              htmlFor="uncontrolled-native"
+            >
               Unidad de Medida
             </InputLabel>
             <Select
+              id="measurement-unit"
+              labelId="measurement-unit-label"
               value={form.measurementUnitId}
               onChange={(e) => {
                 setForm({
