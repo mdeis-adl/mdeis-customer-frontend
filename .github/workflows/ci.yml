@@ -53,3 +53,19 @@ jobs:
           tags: |
             aicallec/proyect_ci:latest
             aicallec/proyect_ci:${{ github.sha }}
+
+  deploy:
+    needs: docker
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    
+    steps:
+      - name: Install Koyeb CLI
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/koyeb/koyeb-cli/master/install.sh | sh
+          echo "$HOME/.koyeb/bin" >> $GITHUB_PATH
+
+      - name: Redeploy to Koyeb
+        run: koyeb service redeploy proyect-ci/proyect-ci
+        env:
+          KOYEB_TOKEN: ${{ secrets.KOYEB_API_TOKEN }}
