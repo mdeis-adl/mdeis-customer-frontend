@@ -66,6 +66,6 @@ jobs:
           echo "$HOME/.koyeb/bin" >> $GITHUB_PATH
 
       - name: Redeploy to Koyeb
-        run: koyeb service redeploy proyect-ci/proyect-ci
+        run: koyeb service redeploy ready-gennie/proyect-ci
         env:
           KOYEB_TOKEN: ${{ secrets.KOYEB_API_TOKEN }}
