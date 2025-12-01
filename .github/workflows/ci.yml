@@ -25,7 +25,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    # - run: npm run lint
     - run: npm run test
     - run: npm run build
 
@@ -52,6 +51,8 @@ jobs:
         with:
           context: .
           push: true
+          build-args: |
+            NEXT_PUBLIC_API_URL=https://api.miapp.com
           tags: |
             aicallec/proyect_ci:latest
             aicallec/proyect_ci:${{ github.sha }}
