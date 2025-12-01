@@ -213,6 +213,16 @@ export default function CustomerRegister() {
             required
           />
         </Grid>
+        <Grid size={{ xs: 6, md: 4 }}>
+          <TextField
+            label="Código Postal"
+            name="postalCode"
+            type="number"
+            value={form.postalCode}
+            onChange={handleChange}
+            required
+          />
+        </Grid>
         <Button variant="contained" color="primary" type="submit">
           Registrar
         </Button>
