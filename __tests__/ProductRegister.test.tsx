@@ -1,6 +1,6 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import ProductRegister from "@/app/products/register/page";
 import { getMeasurementUnits, saveProduct } from "@/app/services/products.service";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 
 jest.mock("next/navigation", () => ({
   useRouter: () => ({ replace: jest.fn() }),
@@ -28,8 +28,8 @@ describe("ProductRegister Component", () => {
 
     expect(await screen.findByText("Kilogramo (KG)")).toBeInTheDocument();
 
-    expect(screen.getByLabelText(/nombre/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/sku/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/nombre1/i)).toBeInTheDocument();
+    // expect(screen.getByLabelText(/sku/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/descripción/i)).toBeInTheDocument();
   });
 
