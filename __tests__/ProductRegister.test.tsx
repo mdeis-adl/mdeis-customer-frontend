@@ -28,7 +28,7 @@ describe("ProductRegister Component", () => {
 
     expect(await screen.findByText("Kilogramo (KG)")).toBeInTheDocument();
 
-    expect(screen.getByLabelText(/nombre/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/nombre1/i)).toBeInTheDocument();
     // expect(screen.getByLabelText(/sku/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/descripción/i)).toBeInTheDocument();
   });
